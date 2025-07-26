@@ -5,6 +5,7 @@ export default function Home() {
     <div>
       <h1>kermanshah</h1>
       <h1>tehran</h1>
+      <h1>tabriz</h1>
     </div>
   );
 }

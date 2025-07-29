@@ -1,0 +1,118 @@
+.header{
+  background-color: rgb(255, 255, 255);
+  height: 120px;
+  width: 100%;margin: 0px;
+  position: absolute;
+  top:0px;
+  left:0px;
+  box-shadow: 1px 1px 10px #355b81;
+  border-bottom: 1px solid #0661fe;
+}
+
+.logo{
+  position:absolute;
+  top:5px;
+  right:50%;
+  width: 130px;
+  margin: 0px;
+  height: 93px;
+}
+
+.user-profile{
+  position: absolute;
+  top:43px;
+  left:133px;
+}
+
+.profile-label{
+ margin-left: 8px;
+ font-size: 17px;
+
+}
+
+.profile{
+  color: #a8a8a8;
+ font-size: 24px;
+
+}
+.log{
+  border:2px solid rgb(234, 234, 234);
+  position:absolute;
+  left:9px;
+  top: 35px;
+  width:110px;
+  padding: 0px;
+  border-radius: 8px;
+ height: 37px;
+  
+}
+
+.login{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+ height: 37px;
+  width: 45px;
+  background-color: #ffffff;
+  border: 0px solid;
+  float: right;
+  font-size: 17px;
+  border-radius:0px 8px 8px 0px;
+  font-size:16px;
+}
+
+.logup{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+   width: 65px;
+    font-size:17px;
+   height: 37px;
+    border: 0px solid;
+    border-right: 1px solid rgb(201, 201, 201);
+    border-radius: 8px 0px 0px 8px;
+  background-color: #ffffff;
+  
+}
+
+.login:hover{
+ background-color: #0303eb;
+}
+.logup:hover{
+  background-color: #0303eb;
+}
+
+.shoping-cart{
+  width:40px;
+  height: 40px;
+  position:absolute;
+  left:320px;
+  border: 50%;
+  opacity:50%;  
+  top:35px
+}
+.meno{
+  position: absolute;
+  top: 37px;
+  right: 15px;
+  margin: 0px;
+}
+
+.search{
+  position: absolute;
+  top:35px;
+  right:5%;
+ 
+}
+
+.labelsearch{
+  margin-left: 10px;
+   font-size: 18px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.inputsearch{
+  width: 35vw;
+  height: 35px;
+  border-radius: 15px;
+  font-size: 18px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border: 1px solid blue;
+  background-color:rgba(230,230,230,.9);
+}

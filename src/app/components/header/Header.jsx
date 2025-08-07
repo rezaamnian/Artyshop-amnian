@@ -8,7 +8,7 @@ export default function Header() {
         <h2 className='meno'>&#9776;</h2>
          <img src="./img/logo6.png" alt="not"  className='logo'/>
           <form className='search'>
-             
+             <i className=' 	fa fa-search search-icon' ></i>
              <input type="text" dir='rtl'   id='serch' placeholder='محصول مورد نظر...'  className='inputsearch'/>
              <label htmlFor="serch" className='labelsearch'>:جستجو</label>
           </form>
@@ -36,6 +36,15 @@ export default function Header() {
           104h491v60H277q-42 0-60.5-28t.5-63l64-118-152-322H51v-60h117l37 
           79Zm140 288h288-288Z"/></svg> 
     </div>
+     <div className='c1'>
+      <i className='fas fa-home  home-icone'>  </i> 
+      <span className='x1'>خانه  </span>
+      <span  className='x1'>دسته بندی ها </span>
+      <span  className='x1'>تخفیف ها </span>
+      <span  className='x1'>تماس با ما </span>
+      <span  className='x1'>درباره ما</span>
+
+     </div>
      
    </header>
   )

@@ -1,12 +1,12 @@
 .header{
   background-color: rgb(255, 255, 255);
-  height: 120px;
-  width: 100%;margin: 0px;
+  height: 130px;
+  width: 100%;
+  margin: 0px;
   position: absolute;
   top:0px;
   left:0px;
-  box-shadow: 1px 1px 10px #355b81;
-  border-bottom: 1px solid #0661fe;
+  border-bottom: 2px solid rgb(232, 229, 229);
 }
 
 .logo{
@@ -101,6 +101,14 @@
  
 }
 
+.search-icon{
+  font-size: 18px;
+  color: #727272;
+  position: absolute;
+  left:3%;
+  top:30%;
+  transform:scaleX(-1)
+}
 .labelsearch{
   margin-left: 10px;
    font-size: 18px;
@@ -116,3 +124,35 @@
   border: 1px solid blue;
   background-color:rgba(230,230,230,.9);
 }
+
+.c1{
+  height: 23px;
+  width: 100%;
+  position: absolute;
+  right: 0px;
+  bottom: 0%;
+  background-color: #ff6c03;
+  border-top: 2px solid rgb(232, 229, 229);
+  border-bottom: 2px solid rgb(232, 229, 229);
+  
+}
+
+.home-icone{
+  float: right;
+  margin-right: 12px;
+  direction: rtl;
+  color: aliceblue;
+  font-size: 20px;
+  margin-left: 5px;
+  color: #4c4c4c;
+
+}
+
+.x1{
+  margin-top: 6px;
+  float: right;
+  font-size: 1vw;
+  margin-left: 5vw;
+   color: #222222;
+}
+

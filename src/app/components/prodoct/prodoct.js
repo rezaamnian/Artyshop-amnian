@@ -1,8 +1,9 @@
 
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './style.css'
+import Link from 'next/link';
 export default function Prodoct() {
 
   const [prodoct,setprodoct]=useState( 
@@ -16,14 +17,80 @@ export default function Prodoct() {
             {name:'ghablame2.jpg',title:'سرویس سه تیکه قابلمه',id:7,price:'590,000'},
             {name:'ghablame3.jpg',title:'سرویس شش تیکه قابلمه استیل',id:8,price:'1,450,000'},
             {name:'tablo.jpg',title:'تابلو فرش ',id:9,price:'2,300,000'},
-            {name:'fenjan2.webp',title:'چای خوری سلطنتی طرح لیلی و مجنون',id:10,price:'2,800,000'}
+            {name:'fenjan2.webp',title:'چای خوری سلطنتی طرح لیلی و مجنون',id:10,price:'2,800,000'},
+            {name:'piknik.jpg',title:'کپسول پیک نیک مناسب طبیغت گردی',id:11,price:'250,000'},
+            {name:'ghashogh1.webp',title:'سرویس 24 تیکه کارت قاشق و چنگال',id:12,price:'1,300,000'},
+
+             {name:'zodpaz.jpg',title:'زود پز برقی  با قابلیت تنظیم زمان' ,id:13,price:'870,000'},
+            {name:'taghche.jpg',title:'تاقچه چوبی چند طبقه',id:14,price:'170,000'},
+
+             {name:'shokolatkory.jpg',title:'شکلات خوری چینی' ,id:15,price:'370,000'},
+            {name:'ghory.jpg',title:'قوری طرح مینیمال ',id:112,price:'220,000'},
+            {name:'goldan.jpg',title:'گلدان چینی',id:35,price:'280,000'},
+            {name:'koze.jpg',title:'آجیل خوری چینی',id:554,price:'540,000'},
+            {name: 'mojasame.jpg',title:'مجسمه فلزی مرغابی',id:5685,price:'380,000'},
+            {name:'ayne.webp',title:'آینه دیواری طرح دار',id:6879,price:'330,000'},
+            {name:'ghablame2.jpg',title:'سرویس سه تیکه قابلمه',id:117,price:'590,000'},
+            {name:'ghablame3.jpg',title:'سرویس شش تیکه قابلمه استیل',id:887,price:'1,450,000'},
+            {name:'tablo.jpg',title:'تابلو فرش ',id:9,price:'2,300,000'},
+            {name:'fenjan2.webp',title:'چای خوری سلطنتی طرح لیلی و مجنون',id:100,price:'2,800,000'},
+            {name:'piknik.jpg',title:'کپسول پیک نیک مناسب طبیغت گردی',id:1100,price:'250,000'},
+            {name:'ghashogh1.webp',title:'سرویس 24 تیکه کارت قاشق و چنگال',id:15472,price:'1,300,000'},
+
+             {name:'baghche.jpg',title:'پایه گلدان چوبی چند طبقه' ,id:189,price:'670,000'},
+            {name:'ghory.jpg',title:'قوری طرح مینیمال ',id:4442,price:'220,000'},
+           
+           
           
         ]
 
 )
+
+const [stopNumber,setstopNumber]=useState(12);
+const [startNumber,setstartNumber]=useState(0);
+const[showItems,setshowItems]=useState(prodoct.slice(startNumber,stopNumber));
+
+function movetoright(){
+  if(stopNumber<prodoct.length){
+         setstartNumber((j)=>j+12);
+         setstopNumber((j)=>j+12);
+  }
+
+
+}
+
+
+function movetoleft(){
+  if(startNumber>0){
+         setstartNumber((j)=>j-12);
+         setstopNumber((j)=>j-12);
+  }
+
+
+}
+
+
+useEffect(()=>{
+   setshowItems(prodoct.slice(startNumber,stopNumber))
+  
+},[startNumber])
+
+
+
+
+
+
   return (
-    <div className='prodoct'>
-      {prodoct.map((item)=>(
+    <div className='divprodoct'>
+      <div className='hederprodoct' id='heder'>
+       <h1 className='filterheder'>فیلتر ها</h1>
+       <h1 className='prodoctheder'>نمایش محصولات</h1>
+      </div>
+    
+    <div className='prodoct1'>
+      <div className='prodoct'>
+        
+         {showItems.map((item)=>(
         <div key={item.id} className='prodoct-item'>
         <img src={`./prodoct/${item.name}`} alt="img nut fund" className='imgprodoct'/>
          <span className='titleprodoct'>{item.title}</span>
@@ -33,9 +100,44 @@ export default function Prodoct() {
       )
 
       )
-
+      
       }
-    
+
+      <button className='button1'onClick={()=>{movetoleft()}} ><i className='fas fa-angle-left'></i></button>
+      <button className='button2'  onClick={()=>{movetoright()}}><i className=' 	fas fa-angle-right'></i></button>
+
     </div>
+
+     <div className='foterprodoct'>
+      <a  href='#heder'><button className='button3'onClick={()=>movetoleft()}  ><i className='fas fa-angle-left'></i></button></a>  
+        <span className='span-nextpage'>صفحه 2/9</span>
+       <a  href='#heder' ><button className='button4'  onClick={()=>{movetoright()}}><i className=' 	fas fa-angle-right'></i></button></a> 
+    </div> 
+    </div>
+    
+    
+    <div className='filterprodoct'>
+    
+      
+      <ul className='filterlist'>
+         <li className='itemlist'>کلیه ی محصولات</li>
+         <li className='itemlist'> جدیدترین ها</li>
+         <li className='itemlist'>محبوب ترین ها </li>
+         <li className='itemlist'> گران ترین ها </li>
+         <li className='itemlist'> ارزان ترین ها</li>
+         <li className='itemlist'> تخفیف های این هفته</li>
+         <li className='itemlist'> پرفروش ترن ها</li>
+      </ul>
+        <br />
+      
+      
+    </div>
+
+   
+     </div>
   )
 }
+
+
+
+    

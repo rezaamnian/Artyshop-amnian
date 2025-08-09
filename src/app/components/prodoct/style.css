@@ -1,38 +1,90 @@
 
-
-.prodoct{
-   
-    width: 100%;
+.divprodoct{
+   width: 100%;
     position: absolute;
-    top:650px;
+    top:680px;
     left:0px;
-    display:grid;
-    column-gap: 0px;
-    row-gap: 25px;
-    grid-template-columns:auto auto auto auto auto;
-     justify-content: space-around;
-      grid-template-rows: auto auto auto auto auto;
-      border: 2px solid #c3c3c3;
-      background-color: #ffffff;
+    background-color: #ffffff;
+    border-bottom:2px solid rgb(220, 206, 206)
 
 }
 
+.hederprodoct{
+    color: blue;
+    margin-top: 0px;
+    display: block;
+    height: 30px;
+}
+
+
+.filterprodoct{
+ width:20%;
+ float: left;
+ position: sticky;
+ top: 0px;
+ border-top: 2px solid  rgb(217, 217, 217);
+ box-sizing: border-box;
+}
+
+
+.prodoct1{
+  position: relative;
+  width:80%;
+ float: left;
+background-color: #ffffff;
+}
+
+
+
+.prodoct{
+    width:100%;
+    
+    float: left;
+    display:grid;
+    column-gap: 23px;
+    row-gap: 10px;
+    grid-template-columns:auto auto auto auto;
+    justify-content:center;
+    grid-template-rows: auto auto auto auto auto;
+    border: 2px solid  rgb(217, 217, 217);
+    box-sizing: border-box;
+    background-color: #ffffff;
+
+}
+
+.prodoctheder{
+    display: inline;
+    float: right;
+     margin: 0px 2%;
+     width: 700px;
+       font-size: 1.7vw;
+}
+
+.filterheder{
+    float: right;
+    margin: 0px 2%;
+    display: inline;
+   font-size: 1.7vw;
+}
+
 .prodoct-item{
-    width:17vw;
-    height: 360px;
-    margin-top: 15px;
-    border-radius: 12px;
-    border: 2px solid rgb(215, 212, 212);
+    width:18vw;
+    height: 380px;
+    margin-top: 12px;
+    border-radius: 18px;
     box-shadow: 4px 4px 10px rgb(207, 207, 207);
+    background-color: #ffffff;
 
 }
 
 
 .imgprodoct{
-
-width:100%;
+margin: auto;
+display: block;
+margin-top:10px;
+width:90%;
 height: 70%;
-border-radius:8px 8px 0px 0px ;
+border-radius:18px 18px 18px 18px ;
 
 }
 
@@ -45,16 +97,7 @@ border-radius:8px 8px 0px 0px ;
     margin-top:1%;
 }
 
-.priceprodoct{
-    direction:rtl;
-     margin: auto;
-    display: block;
-     font-size: 1vw;
-     
-    color: rgb(253, 102, 2);
-    margin-top: 5%;
-     text-align: center;
-}
+
 
 .buttonprodoct{
     border-radius: 8px;
@@ -68,3 +111,112 @@ border-radius:8px 8px 0px 0px ;
     font-size: 1.1vw;
     border: 2px solid rgb(201, 200, 200);
 }
+
+
+.filterlist{
+margin-right: 0px;
+direction: rtl;
+width: 100%;
+margin-top: 0px;
+display: block;
+}
+
+.itemlist{
+ background-color: rgb(231, 239, 245);
+text-align: center;
+width: 95%;
+padding: 14px 10px 14px 0px;
+border: 1px solid rgb(218, 218, 218);
+border-radius: 28px ;
+list-style-type: none;
+box-sizing: border-box;
+margin-top: 8px;
+}
+
+
+
+li:hover{
+background-color: #89c1de;
+
+
+}
+
+.button1{
+width:30px;
+height:75px;
+position:absolute;
+top:30%;
+left: 2px;
+font-size: 22px;
+border: 1px solid rgb(224, 224, 224);
+border: 2px solid rgb(223, 222, 222);
+border-radius: 8px;
+}
+
+.button2{
+height:75px;
+width:30px;
+position:absolute;  
+top:30%;
+right:2px;
+font-size: 22px;
+background-color: rgb(255, 255, 255);
+border: 2px solid rgb(223, 222, 222);
+
+border-radius: 8px;
+}
+
+
+.foterprodoct{
+position:relative;
+box-sizing: border-box;
+display: block;
+float: left;
+height: 52px;
+width:100%;
+padding: 0px;
+border-right:2px solid rgb(220, 206, 206);
+}
+
+
+.button3{
+   width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 46%;
+    top:8px;
+    background-color: #ffffff;
+    border: 1px solid rgb(200, 197, 197);
+     border-radius: 8px;
+
+}
+
+.button4{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 41%;
+    top:8px;
+     background-color: #ffffff;
+    border: 1px solid rgb(200, 197, 197);
+     border-radius: 8px;
+
+}
+
+.span-nextpage{
+    position: absolute;
+    top:19px;
+    left:50%
+}
+
+.priceprodoct{
+    direction:rtl;
+     margin: auto;
+    display: block;
+     font-size: 1vw;
+     
+    color: rgb(253, 102, 2);
+    margin-top: 5%;
+     text-align: center;
+}
+

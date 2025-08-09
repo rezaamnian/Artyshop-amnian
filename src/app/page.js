@@ -5,6 +5,7 @@ import Showprodoct from "./components/showprodoct/showprodoct";
 import Slider from "./components/slider/Slider";
 import Categorization from "./components/categorization/categorization";
 import Prodoct from "./components/prodoct/prodoct";
+import Foter from "./components/foter/foter";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
      <Slider/>
      <Categorization/>
      <Prodoct/>
+     <Foter/>
     </div>
   )
 }

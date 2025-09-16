@@ -45,7 +45,7 @@ export default function Prodoct() {
         ]
 
 )
-
+const [pagenumber,setpagenumber]=useState(1);
 const [stopNumber,setstopNumber]=useState(12);
 const [startNumber,setstartNumber]=useState(0);
 const[showItems,setshowItems]=useState(prodoct.slice(startNumber,stopNumber));
@@ -54,6 +54,7 @@ function movetoright(){
   if(stopNumber<prodoct.length){
          setstartNumber((j)=>j+12);
          setstopNumber((j)=>j+12);
+         setpagenumber((j)=>j+1)
   }
 
 
@@ -64,6 +65,7 @@ function movetoleft(){
   if(startNumber>0){
          setstartNumber((j)=>j-12);
          setstopNumber((j)=>j-12);
+         setpagenumber((j)=>j-1)
   }
 
 
@@ -87,15 +89,22 @@ useEffect(()=>{
        <h1 className='prodoctheder'>نمایش محصولات</h1>
       </div>
     
+    <div className='prodoctandfilter'>
+
+   
     <div className='prodoct1'>
       <div className='prodoct'>
         
          {showItems.map((item)=>(
         <div key={item.id} className='prodoct-item'>
+          
         <img src={`./prodoct/${item.name}`} alt="img nut fund" className='imgprodoct'/>
-         <span className='titleprodoct'>{item.title}</span>
-         <span className='priceprodoct'>{item.price  + ' تومان'}</span>
+            <span className='titleprodoct'>{item.title}</span>
+            
+         <span className='priceprodoct'><span className='price'>قیمت:</span>{item.price  + ' تومان'} </span>
          <button className='buttonprodoct'>خرید</button>
+          
+         
         </div>
       )
 
@@ -108,17 +117,40 @@ useEffect(()=>{
 
     </div>
 
-     <div className='foterprodoct'>
-      <a  href='#heder'><button className='button3'onClick={()=>movetoleft()}  ><i className='fas fa-angle-left'></i></button></a>  
-        <span className='span-nextpage'>صفحه 2/9</span>
-       <a  href='#heder' ><button className='button4'  onClick={()=>{movetoright()}}><i className=' 	fas fa-angle-right'></i></button></a> 
+     
+
+      <div className='foterprodoct'>
+        <div className='ft'> 
+
+      <a  href='#heder'><button className='button5'onClick={()=>movetoleft()}  ><i className='fas fa-angle-left'></i></button></a>  
+        <span className='span-nextpage'>صفحه {pagenumber}/3</span>
+       <a  href='#heder' ><button className='button6'  onClick={()=>{movetoright()}}><i className=' 	fas fa-angle-right'></i></button></a> 
     </div> 
+        </div>
+       
+
+
     </div>
     
     
     <div className='filterprodoct'>
-    
+       <div className='filterprodoctmobile'>
+           <label className='filterprodoctmobile1'>فیلترها</label>
+       <select className='selectprodoct'>
+        <option value="p1">کلیه ی محصولات</option>
+        <option value="p1">جدیدترین ها</option>
+        <option value="p1">محبوب ترین ها</option>
+        <option value="p1">گران ترین ها</option>
+         <option value="p1">ارزان ترین ها</option>
+         <option value="p1">تخفیف های این هفته</option>
+         <option value="p1">پرفروش ترین ها</option>
+        
+ 
+       </select>
+       </div>
       
+
+
       <ul className='filterlist'>
          <li className='itemlist'>کلیه ی محصولات</li>
          <li className='itemlist'> جدیدترین ها</li>
@@ -133,7 +165,7 @@ useEffect(()=>{
       
     </div>
 
-   
+    </div>
      </div>
   )
 }

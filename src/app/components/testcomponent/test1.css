@@ -1,26 +1,6 @@
+.p1{
 
-
-
-.n1{
-margin: 0px;
-height: 2000px;
-background-color: rgb(249, 240, 240);
-display: flex;
-flex-flow: column;
-row-gap: 100px  20px;
-}
-
-.j1{
-    background-color: aqua;
-     height: 250px;
-}
-
-.j2{
-    height: 400px;
-       background-color: rgb(250, 54, 9)
-}
-
-.j3{
-height: 150px;
- background-color: rgb(170, 5, 93)
+background-color: brown;
+height: 7rem;
+margin: auto;
 }

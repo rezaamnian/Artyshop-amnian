@@ -15,7 +15,7 @@ export default function Slider() {
 
 
   return (
-    <div className='slider'>
+    <div className='slider'  >
          <div className='slide' >
             <img src={`imgprodoct/${prodoct[0]}`} alt="noimg" className='img'/>
             <img src={`imgprodoct/${prodoct[1]}`} alt="noimg" className='img'/>
